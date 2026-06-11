@@ -1,7 +1,7 @@
 import java.util.*;
 
 class EmployeeManagementSystem{
-        static class Employee{
+    static class Employee{
         private String name;
         private long employeeId;
         private String designation;
@@ -68,9 +68,9 @@ class EmployeeManagementSystem{
             System.out.print("Designation: ");
             employees[i].setDesignation(sc.next());
             System.out.print("Experience: ");
-            employees[i].experience = sc.nextInt();
+            employees[i].setExperience(sc.nextInt());
             System.out.print("Age: ");
-            employees[i].age = sc.nextInt();
+            employees[i].setAge(sc.nextInt());
         }
         displayMenu();
     }
@@ -82,15 +82,15 @@ class EmployeeManagementSystem{
             System.out.println("Enter the information of the new Employee:");
             System.out.print("Name: ");
             employees[index] = new Employee();
-            employees[index].name = sc.next();
+            employees[index].setName(sc.next());
             System.out.print("Employee ID: ");
-            employees[index].employeeId = sc.nextLong();
+            employees[index].setEmployeeId(sc.nextLong());
             System.out.print("Designation: ");
-            employees[index].designation = sc.next();
+            employees[index].setDesignation(sc.next());
             System.out.print("Experience: ");
-            employees[index].experience = sc.nextInt();
+            employees[index].setExperience(sc.nextInt());
             System.out.print("Age: ");
-            employees[index].age = sc.nextInt();
+            employees[index].setAge(sc.nextInt());
         } 
         else{
             System.out.println("Employee Table Full");
@@ -100,11 +100,11 @@ class EmployeeManagementSystem{
 
     static void removeEmployeeAtIndex(int index){
         for (int j = index; j < employeeCount - 1; j++){
-            employees[j].name = employees[j + 1].name;
-            employees[j].employeeId = employees[j + 1].employeeId;
-            employees[j].designation = employees[j + 1].designation;
-            employees[j].experience = employees[j + 1].experience;
-            employees[j].age = employees[j + 1].age;
+            employees[j].setName(employees[j + 1].getName());
+            employees[j].setEmployeeId(employees[j + 1].getEmployeeId());
+            employees[j].setDesignation(employees[j + 1].getDesignation());
+            employees[j].setExperience(employees[j + 1].getExperience());
+            employees[j].setAge(employees[j + 1].getAge());
         }
     }
 
@@ -112,7 +112,7 @@ class EmployeeManagementSystem{
         System.out.println("Enter the Employee ID to Delete Record: ");
         long employeeId = sc.nextLong();
         for (int i = 0; i < employeeCount; i++){
-            if (employees[i].employeeId == employeeId){
+            if (employees[i].getEmployeeId() == employeeId){
                 removeEmployeeAtIndex(i);
                 employeeCount--;
                 System.out.println("Employee record deleted successfully.");
@@ -126,13 +126,13 @@ class EmployeeManagementSystem{
         System.out.println("Enter the Employee ID to Search Record: ");
         long employeeId = sc.nextLong();
         for (int i = 0; i < employeeCount; i++){
-            if (employees[i].employeeId == employeeId){
+            if (employees[i].getEmployeeId() == employeeId){
                 System.out.println("\nEmployee Details:");
-                System.out.println("Name: " + employees[i].name);
-                System.out.println("Employee ID: " + employees[i].employeeId);
-                System.out.println("Designation: " + employees[i].designation);
-                System.out.println("Experience: " + employees[i].experience);
-                System.out.println("Age: " + employees[i].age);
+                System.out.println("Name: " + employees[i].getName());
+                System.out.println("Employee ID: " + employees[i].getEmployeeId());
+                System.out.println("Designation: " + employees[i].getDesignation());
+                System.out.println("Experience: " + employees[i].getExperience());
+                System.out.println("Age: " + employees[i].getAge());
                 break;
             }
         }
