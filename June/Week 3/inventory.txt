@@ -1,0 +1,4 @@
+I001,Notebook,Stationery,45.50,10
+I002,Pencil,Stationery,5.00,50
+I003,Mouse,Electronics,799.00,3
+I004,Water Bottle,Kitchen,120.00,8
