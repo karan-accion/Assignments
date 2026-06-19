@@ -1,0 +1,3 @@
+Aman,9876543210,aman@gmail.com
+Riya,9123456780,riya@yahoo.com
+Sunil,9988776655,sunil@hotmail.com
